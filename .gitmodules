@@ -1,0 +1,10 @@
+[submodule "ofw-install-server"]
+	path = ofw-install-server
+	url = https://github.com/kakwa/ofw-install-server
+[submodule "ofwboot"]
+	path = ofwboot
+	url = https://github.com/kakwa/ofwboot-standalone
+	branch = tftp
+[submodule "3d-model"]
+	path = 3d-model
+	url = https://github.com/kakwa/sun-v100-case

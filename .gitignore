@@ -1,0 +1,9 @@
+*.FCBak
+.gitattributes
+machine
+*.d
+*.o
+*.a
+ofwboot
+bsd.rd
+ofwboot.net
