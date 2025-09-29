@@ -8,3 +8,6 @@
 [submodule "3d-model"]
 	path = 3d-model
 	url = https://github.com/kakwa/sun-v100-case
+[submodule "ansible-netbsd"]
+	path = ansible
+	url = https://github.com/kakwa/ansible-netbsd

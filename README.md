@@ -1,41 +1,29 @@
 # My Silly Sun Server
 
-This project gathers the assets I created to put an old Sun V100 to new use.
+![Sun V100 in custom 10" case - front view](misc/sun-final-front.jpg)
 
-It contains the following assets:
+This repo gathers the assets [My Silly Sun Server](https://technically.kakwalab.ovh/posts/silly-sun-server-intro/) project.
 
-* 3D models for a custom 10 inches case
-* Various bits of code, scripts & notes on how to install a modern OS onto this old tiny server
+The goal of this project was recommissioning a +20 years old V100 SunFire server and make it actually useful, hosting modern services while
+reworking its hardware to be "living room" compatible (size & noise level).
 
-# Submodules
+# Components
 
-This repository uses Git submodules for large/externally maintained components. After cloning, initialize and fetch submodules with:
+After checkout of this repository, you can get the different parts of this project by using `git submodules`:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-If you already cloned without submodules, run the same command in the repo root.
-
-# Layout
-
-High-level directories:
-
-* `ofw-install-server/`: Open Firmware install server utilities (Go).
+The different components are:
+* `3d-model/`: Custom Sun V100 10" case CAD models.
+* `ofw-install-server/`: Custom Golang netboot server for Sun OpenFirmware servers (RARP, TFTP & NetBSD/OpenBSD diskless services).
+* `ansible/`: Ansible roles for my NetBSD server setup (Nginx, PostgreSQL, PHP, FreshRSS, and misc hacks).
 * `ofwboot/`: OpenBSD `ofwboot` bootloader (branch `tftp` == attempt to use tftp+rarp instead of nfs+bootp, switch to branch `main` for the base bootloader).
-* `3d-model/`: Sun V100 10" case models.
 * `misc/`: Misc configurations and scripts.
 
 # Licenses
 
-## Case 3D models
-
-Sun v100 10 inch Case 3D model © 2025 by kakwa is licensed under `CC BY-SA 4.0`.
-
-To view a copy of this license, visit [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).
-
-## Scripts & Code Snippets
-
-The various scripts and code snippets I created are under the MIT License.
-
-`ofwboot` retains it's original OpenBSD license.
+* Sun v100 10 inch Case 3D model © 2025 by kakwa is licensed under `CC BY-SA 4.0`.
+* My `ansible` code, the scripts and `ofw-install-server` are licensed under MIT.
+* `ofwboot` retains it's original OpenBSD license.
